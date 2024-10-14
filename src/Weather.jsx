@@ -186,7 +186,7 @@ export default function Weather() {
     return (
         <>
             {location && <nav>
-                            <div><img className="logo" src="src\assets\WEATHERLY-removebg.png" alt="LOGO" /></div>
+                            <div><img className="logo" src=".\assets\WEATHERLY-removebg.png" alt="LOGO" /></div>
                             <div className="locationDiv">
                                 <FontAwesomeIcon icon={faLocationDot} />
                                 <span className="ms-1 locationText">Current Location: </span>
