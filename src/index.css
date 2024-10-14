@@ -1,0 +1,156 @@
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #f2f2f2;
+  padding: 0 20px;
+}
+.navLinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 30%;
+}
+.navLinks li{
+  padding: 20px;
+  cursor: pointer;
+}
+.navLinks li:hover{
+  border-bottom: 1px solid blue;
+}
+.navLinks a{
+  text-decoration: none;
+  color: black;
+}
+
+.welcome{
+  background-color: rgb(36, 214, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.loginPrompt{
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.count-container{
+  text-align: center;
+}
+.count-display{
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.count-button{
+  font-size: 1.5em;
+  background-color: rgb(0, 209, 209);
+  color: white;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.color-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.color-display{
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.toDoList-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.task-input{
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+.add-button{
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+.list-display li{
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 10px 0;
+  background-color: hsla(0, 0%, 95%, 0.757);
+}
+.list-display li span{
+  flex: 1;
+  margin-right: 10px;
+}
+.list-display li button{
+  font-size: 1.3rem;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* StopWatch */
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 50px;
+}
+.display{
+  font-size: 4rem;
+  margin-bottom: 25px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.controls button{
+  font-size: 1.5rem;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.5s ease;
+}
+.start-button{
+  background-color: hsla(120, 100%, 45%, 0.6);
+}
+.start-button:hover{
+  background-color: hsla(120, 100%, 35%, 0.6);
+}
+.stop-button{
+  background-color: hsla(0, 100%, 50%, 0.815);
+}
+.stop-button:hover{
+  background-color: hsla(0, 100%, 40%, 0.815);
+}
+.reset-button{
+  background-color: hsla(219, 100%, 49%, 0.6);
+}
+.reset-button:hover{
+  background-color: hsla(219, 100%, 39%, 0.6);
+}
