@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ubuntu, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-image: url(./assets/earth.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    padding: 0 20px;
+}
+.logo{
+    width: 4rem;
+    height: 4rem;
+}
+.locationDiv{
+    margin-left: 3rem;
+    flex: 1;
+}
+.searchDiv{
+    font-size: 1rem;
+    flex: 1;
+}
+.cityInput{
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.searchBtn{
+    padding: 7px 20px;
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    background-color: rgba(95, 255, 255, 0.5);
+}
+.searchBtn:hover{
+    background-color: rgba(95, 255, 255, 0.4);
+}
+.alertDiv{
+    width: 25rem;
+    margin: auto;
+}
+.pendingDiv, .errorDiv{
+    height: 93vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainWeatherDiv{
+    display: flex;
+    align-items: center;
+    margin: 0 40px;
+    padding: 20px 200px;
+    min-height: 47vh;
+}
+.mainWeather, .detailWeather, .moreDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 3rem;
+}
+.mainWeather img{
+    width: 100px;
+    height: 100px;
+}
+.sunTime{
+    margin-bottom: 0;
+}
+
+.fiveDayForecastTitle{
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card{
+    width: 16rem;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    color: rgb(0, 0, 0);
+}
+.card-body{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.card-body .date{
+    margin-bottom: 16px;
+}
+.card-body p{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+    .mainWeatherDiv{
+        padding: 20px 100px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .locationDiv{
+        flex: auto;
+        margin-left: 1rem;
+    }
+    .searchDiv{
+        flex: auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    .locationText{
+        display: none;
+    }
+    .cityInput{
+        width: 200px;
+    }
+    .searchBtn{
+        padding: 7px 13px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .mainWeatherDiv{
+        padding: 20px 20px;
+    }
+}
+@media screen and (max-width: 650px) {
+    nav{
+        padding: 0;
+    }
+    .locationDiv{
+        margin: 0;
+    }
+    .cityInput{
+        width: 150px;
+        padding: 7px 10px;
+    }
+    .mainWeatherDiv{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .mainWeatherDiv div{
+        margin-bottom: 40px;
+    }
+    .mainWeather, .detailWeather, .moreDetail{
+        min-width: 250px;
+        margin-right: 0;
+    }
+    .mainWeather img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .dateTime{
+        display: none;
+    }
+    .searchDiv{
+       
+    }
+}
+@media screen and (max-width: 320px) {
+    .locationDiv{
+        display: none;
+    }
+}
