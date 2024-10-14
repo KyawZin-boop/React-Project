@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { weatherlyLogo } from "./assets/WEATHERLY-removebg.png";
 
 import axios from "axios";
 
@@ -186,7 +187,7 @@ export default function Weather() {
     return (
         <>
             {location && <nav>
-                            <div><img className="logo" src=".\assets\WEATHERLY-removebg.png" alt="LOGO" /></div>
+                            <div><img className="logo" src={weatherlyLogo} alt="Weatherly Logo" /></div>
                             <div className="locationDiv">
                                 <FontAwesomeIcon icon={faLocationDot} />
                                 <span className="ms-1 locationText">Current Location: </span>
