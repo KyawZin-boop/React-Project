@@ -6,7 +6,7 @@
 }
 body{
     min-height: 100vh;
-    background-image: url(./assets/earth.jpg);
+    background-image: url(/images/earth.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -19,8 +19,8 @@ nav{
     height: 7vh;
     background: rgba(255, 255, 255, 0.35);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.3px);
-    -webkit-backdrop-filter: blur(5.3px);
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
     padding: 0 20px;
 }
 .logo{
@@ -54,6 +54,7 @@ nav{
 .alertDiv{
     width: 25rem;
     margin: auto;
+    margin-top: 20px;
 }
 .pendingDiv, .errorDiv{
     height: 93vh;
@@ -183,9 +184,6 @@ nav{
 @media screen and (max-width: 580px) {
     .dateTime{
         display: none;
-    }
-    .searchDiv{
-       
     }
 }
 @media screen and (max-width: 320px) {
