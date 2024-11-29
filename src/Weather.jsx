@@ -80,8 +80,7 @@ export default function Weather({weatherData, isPending, error, sunriseFormat, s
                                     </div>
                                 </div>}
             {isPending && <div className="pendingDiv text-primary">
-                            <span className="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
-                            <span role="status">Loading...</span>
+                            <span className="loader" aria-hidden="true"></span>
                         </div>}
             {error && <div className="errorDiv text-danger fs-3"><span className="text-center">{error}</span></div>}
             {(weatherData && <div key={weatherData.city.id} className="weatherDiv">
