@@ -1,4 +1,4 @@
-
+import Map from "./Map"
 
 export default function Weather({weatherData, isPending, error, sunriseFormat, sunsetFormat, plusOrMinus, fiveDayData, invalidCityName}) {
  
@@ -102,8 +102,9 @@ export default function Weather({weatherData, isPending, error, sunriseFormat, s
                                     <p className="mb-2">Wind Speed: {weatherData.list[0].wind.speed} m/s</p>
                                     <p className="mb-2">Air Humidity: {weatherData.list[0].main.humidity} %</p>
                                     <p className="mb-2">Pressure: {weatherData.list[0].main.pressure} hPa</p>
-                                    <p className="mb-0">Precipitation Probability: {weatherData.list[0].pop * 100} %</p>
+                                    <p className="mb-0">Precipitation Probability: {(weatherData.list[0].pop * 100).toFixed()} %</p>
                                 </div>
+                                
                             </div>
                             <div className="cardContainer">
                                 <p className="fiveDayForecastTitle"><span>5 Day Forecast</span></p>
