@@ -23,19 +23,25 @@ function App() {
   const WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   const getUserLocation = async () => {
-    const response = await axios.get(`https://ipinfo.io/json?token=${ipinfoToken}`);
-    const data = response.data;
-    const [lat, lon] = data.loc.split(",");
-    console.log(data);
-    setLocation({
-        city: data.city,
-        lat: lat,
-        lon: lon,
-        country: data.country,
-        region: data.region,
-        timezone: data.timezone
-    })
-    setCity(data.city);
+    try{
+        const response = await axios.get(`https://ipinfo.io/json?token=${ipinfoToken}`);
+        const data = response.data;
+        const [lat, lon] = data.loc.split(",");
+        console.log(data);
+        setLocation({
+            city: data.city,
+            lat: lat,
+            lon: lon,
+            country: data.country,
+            region: data.region,
+            timezone: data.timezone
+        })
+        setCity(data.city);
+    }catch(err){
+      console.log(err.message);
+      setError(err.message + "! Please kindly use VPN and try again!😓");
+      setIsPending(false);
+    }   
 }
 
 const getWeather = async (city) => {
@@ -75,7 +81,7 @@ const getWeather = async (city) => {
 
     }catch(err){
         if(err.message === "Failed to fetch"){
-            setWeather(null);
+            setWeatherData(null);
             setError(err.message + " the data! Pls check your connection and try again!");
         }else{
             setInvalidCityName("Pls check your city name and try again!");
